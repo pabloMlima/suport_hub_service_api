@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  spring-app:
+    image: openjdk:17-jdk-slim
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: suport_hub_service_container
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: suport_hub_service
+      MYSQL_USER: suport_user
+      MYSQL_PASSWORD: suport_pass
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mysql
+      - sonarqube
+
+  mysql:
+    image: mysql:latest
+    container_name: mysql-container
+    environment:
+      MYSQL_ROOT_PASSWORD: root_user_pass
+      MYSQL_DATABASE: suport_hub_service
+      MYSQL_USER: suport_user
+      MYSQL_PASSWORD: suport_pass
+    ports:
+      - "3306:3306"
+
+  sonarqube:
+    image: sonarqube:latest
+    container_name: sonarqube-container
+    ports:
+      - "9000:9000"
+      - "9092:9092"
+    networks:
+      - sonarnet
+
+networks:
+  sonarnet:
+    driver: bridge
+

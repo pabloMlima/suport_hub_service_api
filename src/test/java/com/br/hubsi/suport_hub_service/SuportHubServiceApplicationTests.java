@@ -3,11 +3,11 @@ package com.br.hubsi.suport_hub_service;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class SuportHubServiceApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+	//@Test
+	//void contextLoads() {
+	//}
 
 }

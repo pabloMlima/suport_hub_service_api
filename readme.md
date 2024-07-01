@@ -81,7 +81,7 @@ Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](LICEN
 
 ## Contato
 
-[linkedin](linkedin.com/in/pablo-machado-lima-42820a194)
+[linkedin](https://www.linkedin.com/in/pablo-machado-lima-42820a194)
 
 Link do Projeto: [https://github.com/pabloMlima/suport_hub_service_api](https://github.com/pabloMlima/suport_hub_service_api)
 
